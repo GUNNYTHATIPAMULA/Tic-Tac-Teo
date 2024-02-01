@@ -10,33 +10,30 @@ const winnig=[
 ];
 let turnx=true;
 let win=document.querySelector(".winner");
-
 let par=document.querySelector("#para");
 let boxes=document.querySelectorAll(".box");
-
 boxes.forEach((b) => {
     b.addEventListener("click",()=>{
-        console.log("clivk");
         if(turnx){
             turnx=false;
             b.innerText="x";
+           
         }
         else{
             b.innerText="o";
             turnx=true;
-            
+           
         }
-        boxes.disabled = true;
-
-       winner();
-
-});
+        b.disabled=true;
+    winner();
+    })
 });
 let winner=() =>{
 for (let pos of winnig) {
     let position= boxes[pos[0]].innerText;
     let position1=boxes[pos[1]].innerText;
     let position3=boxes[pos[2]].innerText;
+    // b.disabled=true;
     if(position !="" && position1 !="" && position3 !=""){
         if(position==position1 && position1==position3){
           console.log("winners",position);
@@ -46,7 +43,7 @@ for (let pos of winnig) {
     }
 }
 }
-const showwinner=(winners)  =>{
+const showwinner=(winners)  => {
           par.innerText=`you won ${winners}`;
           win.classList.remove("hide");
  

@@ -11,7 +11,7 @@ h3{
     display: block;
 }
 .body{
-    
+    text-align: center;
     width: 300px;
     height: 300px;
     background-color: aqua;
@@ -28,6 +28,7 @@ h3{
     align-items: center;
 }
 .box{
+    text-align: center;
     width: 90px;
     height: 90px;
     background-color: #CCD1D1;
@@ -36,13 +37,10 @@ h3{
     -webkit-backdrop-filter: blur( 3px );
     border-radius: 20px;
     border: 1px solid rgba(248, 8, 8, 0.18);
-    font-size: 50px;
-    color: rgb(250, 54, 0);
+    font-size: 60px;
+    padding-bottom: 20px;
+    color: rgb(250, 0, 0);
 }
-
 .winner{
     height: 60px;
-}
-.hide{
-    display: none;
 }
